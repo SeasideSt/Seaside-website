@@ -1,0 +1,2 @@
+# Seaside-website
+seaside.st
