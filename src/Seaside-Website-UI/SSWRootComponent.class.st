@@ -33,7 +33,8 @@ SSWRootComponent class >> register [
 	|application|
 	application := WAAdmin register: self asApplicationAt: self contextRoot.
 	application 		 
-		addLibrary: JQDeploymentLibrary.
+		addLibrary: JQDeploymentLibrary;
+		addLibrary: SSWFileLibrary.
 		
 	^application
 	 

@@ -84,20 +84,26 @@ SSWWebserverSettings class >> switchToDevelopmentMode [
 	#('home' 'notFound') do: [:each |	
 			(WADispatcher default handlerAt: each) 
 				configuration addParent: WADevelopmentConfiguration instance ].
-		
-	SSWRootComponent unregister: 'config'.
-	WAConfigurationTool initialize
+	
+	"Reenable /config and /browse tools"	
+	WAConfigurationTool initialize.
+	WADispatcherBrowser initialize.
+	
+	"Nonetheless reregister homepage to be available on /"
+	SSWHomePage initialize.
 ]
 
 { #category : #'private - deployment' }
 SSWWebserverSettings class >> switchToProductionMode [ 
 	<script>
 	
-	"enable Seaside toolbar"
+	"Disable Seaside toolbar"
 	#('home' 'notFound') do: [:each |	
 			(WADispatcher default handlerAt: each) 
 				configuration removeParent: WADevelopmentConfiguration instance ].
-		
-	SSWRootComponent unregister: 'config'.
-	 
+	
+	"unregister the config tool and browser"	
+	SSWRootComponent 
+		 unregister: 'config';
+		 unregister: 'browse' 
 ]
