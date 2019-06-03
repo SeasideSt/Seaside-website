@@ -14,7 +14,11 @@ Class {
 SSWWebserver class >> browse [
 	<script>
  
-	WebBrowser openOn: 'http://localhost'
+	|port url |
+	url := 'http://localhost'.
+	port := SSWWebserverSettings defaultPort.
+	port = 80 ifFalse: [ url := url, ':', port asString ]. 
+	WebBrowser openOn: url
 ]
 
 { #category : #'private - accessing' }
