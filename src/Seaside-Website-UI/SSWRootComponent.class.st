@@ -51,3 +51,17 @@ SSWRootComponent class >> unregister: ctx [
 	handler := WADispatcher default handlerAt: ctx.
 	WADispatcher default unregister: handler
 ]
+
+{ #category : #defaults }
+SSWRootComponent >> pageTitle [
+
+	^'Seaside'
+]
+
+{ #category : #updating }
+SSWRootComponent >> updateRoot: htmlRoot [
+
+	htmlRoot beHtml5.
+	htmlRoot title: self pageTitle
+	
+]

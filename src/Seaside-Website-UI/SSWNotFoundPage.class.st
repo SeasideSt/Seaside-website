@@ -20,8 +20,16 @@ SSWNotFoundPage class >> initialize [
 	self register
 ]
 
+{ #category : #defaults }
+SSWNotFoundPage >> pageTitle [
+
+	^'Seaside - Not Found'
+]
+
 { #category : #rendering }
 SSWNotFoundPage >> renderContentOn: html [
 
-	html heading: 'Not found'
+	html 
+		heading: 'Oops!';
+		paragraph: 'The resource you are trying to access was not found'
 ]
