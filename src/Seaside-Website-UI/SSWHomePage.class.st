@@ -4,7 +4,7 @@ General homepage of Seaside website
 Class {
 	#name : #SSWHomePage,
 	#superclass : #SSWRootComponent,
-	#category : #'Seaside-Website-UI'
+	#category : #'Seaside-Website-UI-Pages'
 }
 
 { #category : #defaults }

@@ -4,7 +4,7 @@ Common superclass for root components on Seaside website
 Class {
 	#name : #SSWRootComponent,
 	#superclass : #SSWComponent,
-	#category : #'Seaside-Website-UI'
+	#category : #'Seaside-Website-UI-Base'
 }
 
 { #category : #testing }

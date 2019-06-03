@@ -4,7 +4,7 @@ A component rendered when something is not found
 Class {
 	#name : #SSWNotFoundPage,
 	#superclass : #SSWRootComponent,
-	#category : #'Seaside-Website-UI'
+	#category : #'Seaside-Website-UI-Pages'
 }
 
 { #category : #defaults }
