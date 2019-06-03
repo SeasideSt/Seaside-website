@@ -35,6 +35,7 @@ SSWRootComponent class >> register [
 	application 		 
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: SSWBootstrapLibrary;
+		addLibrary: SSWShardsFileLibrary;
 		addLibrary: SSWFileLibrary.
 		
 	^application
