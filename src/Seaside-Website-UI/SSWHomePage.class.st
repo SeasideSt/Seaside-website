@@ -32,5 +32,5 @@ SSWHomePage class >> register [
 { #category : #rendering }
 SSWHomePage >> renderContentOn: html [
 
-	html text: 'Seaside homepage'
+	html heading: 'Seaside homepage'
 ]

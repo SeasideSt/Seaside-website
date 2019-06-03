@@ -34,6 +34,7 @@ SSWRootComponent class >> register [
 	application := WAAdmin register: self asApplicationAt: self contextRoot.
 	application 		 
 		addLibrary: JQDeploymentLibrary;
+		addLibrary: SSWBootstrapLibrary;
 		addLibrary: SSWFileLibrary.
 		
 	^application
