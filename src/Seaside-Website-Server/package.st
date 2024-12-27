@@ -1,1 +1,1 @@
-Package { #name : #'Seaside-Website-Server' }
+Package { #name : 'Seaside-Website-Server' }

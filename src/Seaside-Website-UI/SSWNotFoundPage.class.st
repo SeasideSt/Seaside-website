@@ -2,31 +2,33 @@
 A component rendered when something is not found
 "
 Class {
-	#name : #SSWNotFoundPage,
-	#superclass : #SSWRootComponent,
-	#category : #'Seaside-Website-UI-Pages'
+	#name : 'SSWNotFoundPage',
+	#superclass : 'SSWRootComponent',
+	#category : 'Seaside-Website-UI-Pages',
+	#package : 'Seaside-Website-UI',
+	#tag : 'Pages'
 }
 
-{ #category : #defaults }
+{ #category : 'defaults' }
 SSWNotFoundPage class >> contextRoot [
 
 	^'notFound'
 ]
 
-{ #category : #'initialize - release' }
+{ #category : 'initialize - release' }
 SSWNotFoundPage class >> initialize [
 	"Initializes the receiver class."
 	
 	self register
 ]
 
-{ #category : #defaults }
+{ #category : 'defaults' }
 SSWNotFoundPage >> pageTitle [
 
 	^'Seaside - Not Found'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 SSWNotFoundPage >> renderContentOn: html [
 
 	html 

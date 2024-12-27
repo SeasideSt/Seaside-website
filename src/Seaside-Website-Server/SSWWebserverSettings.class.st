@@ -2,17 +2,19 @@
 Common webserver settings
 "
 Class {
-	#name : #SSWWebserverSettings,
-	#superclass : #Object,
+	#name : 'SSWWebserverSettings',
+	#superclass : 'Object',
 	#classVars : [
 		'DefaultPort',
 		'DeploymentMode',
 		'ResourceFolderName'
 	],
-	#category : #'Seaside-Website-Server-Settings'
+	#category : 'Seaside-Website-Server-Settings',
+	#package : 'Seaside-Website-Server',
+	#tag : 'Settings'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 SSWWebserverSettings class >> adoptToDeploymentMode [
 
 	self deploymentMode = 'Production' 
@@ -20,25 +22,25 @@ SSWWebserverSettings class >> adoptToDeploymentMode [
 		ifFalse: [ self switchToDevelopmentMode ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 SSWWebserverSettings class >> defaultPort [
 
 	^DefaultPort ifNil: [ DefaultPort := 8080 ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 SSWWebserverSettings class >> defaultPort: aPort [
 
 	DefaultPort := aPort
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 SSWWebserverSettings class >> deploymentMode [
 
 	^DeploymentMode ifNil: [ DeploymentMode := 'Development' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 SSWWebserverSettings class >> deploymentMode: aMode [
 
 	DeploymentMode := aMode.
@@ -46,7 +48,7 @@ SSWWebserverSettings class >> deploymentMode: aMode [
 	self adoptToDeploymentMode
 ]
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 SSWWebserverSettings class >> icebergProjectDirectory [
 	"Return the Iceberg directory where the project is stored"
 	
@@ -54,29 +56,29 @@ SSWWebserverSettings class >> icebergProjectDirectory [
 repositoryDirectory
 ]
 
-{ #category : #'initialize - release' }
+{ #category : 'initialize - release' }
 SSWWebserverSettings class >> reset [
 	<script>
 	
 	DefaultPort := ResourceFolderName := nil.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 SSWWebserverSettings class >> resourceFolderName [
 
 	^ResourceFolderName ifNil: [
-		ResourceFolderName := (self icebergProjectDirectory / 'www') ensureCreateDirectory; fullName ]
+		ResourceFolderName := (self icebergProjectDirectory / 'resources') fullName ]
  
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 SSWWebserverSettings class >> resourceFolderName: aString [
 
 	ResourceFolderName := aString
  
 ]
 
-{ #category : #'private - deployment' }
+{ #category : 'private - deployment' }
 SSWWebserverSettings class >> switchToDevelopmentMode [ 
 	<script>
 	
@@ -93,7 +95,7 @@ SSWWebserverSettings class >> switchToDevelopmentMode [
 	SSWHomePage initialize.
 ]
 
-{ #category : #'private - deployment' }
+{ #category : 'private - deployment' }
 SSWWebserverSettings class >> switchToProductionMode [ 
 	<script>
 	

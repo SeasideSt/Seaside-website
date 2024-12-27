@@ -2,15 +2,17 @@
 The webserver for quick access to start and stop the server
 "
 Class {
-	#name : #SSWWebserver,
-	#superclass : #Object,
+	#name : 'SSWWebserver',
+	#superclass : 'Object',
 	#classVars : [
 		'Default'
 	],
-	#category : #'Seaside-Website-Server-Runtime'
+	#category : 'Seaside-Website-Server-Runtime',
+	#package : 'Seaside-Website-Server',
+	#tag : 'Runtime'
 }
 
-{ #category : #utilities }
+{ #category : 'utilities' }
 SSWWebserver class >> browse [
 	<script>
  
@@ -21,7 +23,7 @@ SSWWebserver class >> browse [
 	WebBrowser openOn: url
 ]
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 SSWWebserver class >> default [
 	"Return the default instance"
 	
@@ -29,28 +31,28 @@ SSWWebserver class >> default [
 	 
 ]
 
-{ #category : #'private - defaults' }
+{ #category : 'private - defaults' }
 SSWWebserver class >> defaultPort [
 	"Returns the receivers default port."
 	
 	^SSWWebserverSettings defaultPort  
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 SSWWebserver class >> ifRunning: aBlock [
 	"Evaluate the given block when the server is running"
 	
 	self isRunning ifTrue: aBlock
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 SSWWebserver class >> isRunning [
 	"Return true if the server is running"
 	
 	^ZnZincStaticServerAdaptor default isRunning
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 SSWWebserver class >> reset [
 	"Reset the default server instance"
 	<script>
@@ -58,14 +60,14 @@ SSWWebserver class >> reset [
 	^self stop; start
 ]
 
-{ #category : #'private - defaults' }
+{ #category : 'private - defaults' }
 SSWWebserver class >> resourceFolderName [
 	"Return the folder name for serving static resources."
 
 	^SSWWebserverSettings resourceFolderName 
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 SSWWebserver class >> start [
 	"Start the default server instance"
 	<script>
@@ -73,7 +75,7 @@ SSWWebserver class >> start [
 	^self default start
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 SSWWebserver class >> stop [
 	"Stop the default server instance"
 	<script>
@@ -81,21 +83,21 @@ SSWWebserver class >> stop [
 	^self default stop
 ]
 
-{ #category : #'private - defaults' }
+{ #category : 'private - defaults' }
 SSWWebserver >> defaultPort [
 	"Returns the receivers default port."
 	
 	^self class defaultPort
 ]
 
-{ #category : #'private - defaults' }
+{ #category : 'private - defaults' }
 SSWWebserver >> resourceFolderName [
 	"Return the folder name for serving static resources."
 
 	^self class resourceFolderName 
 ]
 
-{ #category : #'private - running' }
+{ #category : 'private - running' }
 SSWWebserver >> start [
 	"Start the webserver."
 	<script: 'self start'>
@@ -103,7 +105,7 @@ SSWWebserver >> start [
 	ZnZincStaticServerAdaptor startOn: self defaultPort andServeFilesFrom: self resourceFolderName 
 ]
 
-{ #category : #'private - running' }
+{ #category : 'private - running' }
 SSWWebserver >> stop [
 	"Stop the webserver."
 	<script: 'self stop'>
