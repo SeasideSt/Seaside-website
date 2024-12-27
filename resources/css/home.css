@@ -1,0 +1,22 @@
+.home-page .slogan {
+  font-size: 150%;
+  white-space: nowrap;
+  text-align: center;
+  color: #C5161A;
+}
+
+.home-page .navigation {
+  margin-left: 50%;
+  margin-top: 40px;
+  width: 350px;
+  border-radius: 6px;
+}
+
+@media (width < 850px) {
+
+  .home-page .logo {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+  }
+}
