@@ -1,5 +1,7 @@
+name: seaside.st
+
 services:
-  app:
+  web:
     image: jbrichau/seaside-website
     ports:
       - 8080:8080
