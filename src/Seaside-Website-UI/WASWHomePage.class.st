@@ -38,7 +38,11 @@ WASWHomePage >> renderContentOn: html [
 		class: 'page home-page';
 		with: [
 			self renderGithubLinkOn: html.
-			html div class: 'h1-logo'; with: [ html image resourceUrl: 'images/seaside-m.png'  ].
-			html div class: 'slogan'; with: 'The framework for developing sophisticated web applications in Smalltalk'.
-			self renderPageNavigationOn: html ]
+			html div class: 'page-header'; with: [
+				html div class: 'home-page-logo'; with: [ html image resourceUrl: 'images/seaside-m.png'  ].
+				html div class: 'home-page-slogan'; with: 'The framework for developing sophisticated web applications in Smalltalk'. ].			
+			html div class: 'page-left-column'.		
+			html div class: 'page-middle-column'.			
+			html div class: 'page-right-column'; with: [ self renderPageNavigationOn: html ].			
+			html div class: 'page-footer' ]
 ]
