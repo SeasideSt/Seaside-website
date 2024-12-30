@@ -9,7 +9,8 @@ body {
   background-size: cover;
   margin: 0;
   font-family: 'Urbanist';
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden; /* Do not scroll the page */
 }
 
 a {

@@ -1,32 +1,16 @@
-.home-page .h1-logo {
+.home-page {
+  grid-template-rows: 350px 1fr 40px;
+}
+
+.home-page-logo {
   margin: 0;
-  padding-top: 80px;
+  padding-top: 30px;
   text-align: center;
 }
 
-.home-page .slogan {
+.home-page-slogan {
   font-size: 150%;
   white-space: nowrap;
   text-align: center;
   color: #C5161A;
-}
-
-.home-page .navigation {
-  margin-left: 50%;
-  margin-top: 40px;
-  width: 350px;
-  border-radius: 6px;
-}
-
-.home-page h1 {
-  padding-top: 20px;
-}
-
-@media (width < 850px) {
-
-  .home-page .logo {
-    position: relative;
-    width: 300px;
-    aspect-ratio: 1 / 1;
-  }
 }

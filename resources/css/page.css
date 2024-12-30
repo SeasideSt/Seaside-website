@@ -1,67 +1,82 @@
-.page h1 {
+.page {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  grid-template-rows: 216px 1fr 40px;
+  gap: 15px;
+  height: 100%;
+}
+
+.page-header {
+  grid-column-start: span 3;
+}
+
+.page-header h1 {
   margin: 0;
   color: #245E86;
   font-size: 500%;
   font-weight: 500;
   white-space: nowrap;
   padding-top: 80px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
-.page .navigation {
+.navigation {
   background-color: rgb(221 189 141 / 70%);
   padding: 20px;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 
-.page .content {
+.page-content {
   background-color: rgb(241 238 238 / 85%);
   padding: 20px;
   border-radius: 6px;
+  height: 100%;
+  overflow-y: scroll;
 }
 
-.page .section + .section {
+.section + .section {
   margin-top: 15px;
 }
 
-.page .sections {
+.sections {
   display: flex;
   flex-direction: column;
 }
 
-.page .section {
+.section {
   display: flex;
   column-gap: 20px;
 }
 
-.page .section-content {
+.section-content {
   margin-top: 3px;
 }
 
-.page .section-header {
+.section-header {
   font-size: 150%;
   color: #C5161A;
 }
 
-.page .section-detail {
+.section-detail {
   color: #245E86;
 }
 
-.page .section-body {
+.section-body {
   margin-top: 15px;
 }
 
-.page .github-corner {
+.github-corner {
   position: absolute;
   right: 0;
 }
 
-.page .github-corner:hover .octo-arm {
+.github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out
 }
 
-.page .logo {
+.logo {
   position: absolute;
   left: 5px;
   top: 5px;
@@ -82,42 +97,12 @@
   }
 }
 
-.page .columns {
-  display: grid;
-  grid-template-columns: 250px 1fr 250px;
-  gap: 15px;
-}
-
 @media (max-width:500px) {
-  .page .github-corner:hover .octo-arm {
+  .github-corner:hover .octo-arm {
     animation: none
   }
 
-  .page .github-corner .octo-arm {
+  .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out
-  }
-}
-
-@media (width < 850px) {
-
-  .page {
-    flex-direction: column;
-    align-items: center;
-    column-gap: unset;
-    min-width: 500px;
-  }
-
-  .page h1 {
-    text-align: center;
-  }
-
-  .page .logo {
-    position: relative;
-    width: 300px;
-    aspect-ratio: 1 / 1;
-  }
-
-  .page .logo img {
-    width: 300px;
   }
 }
