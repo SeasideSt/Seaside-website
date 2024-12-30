@@ -2,29 +2,29 @@
 General homepage of Seaside website
 "
 Class {
-	#name : 'SSWHomePage',
-	#superclass : 'SSWRootComponent',
+	#name : 'WASWHomePage',
+	#superclass : 'WASWRootComponent',
 	#category : 'Seaside-Website-UI-Pages',
 	#package : 'Seaside-Website-UI',
 	#tag : 'Pages'
 }
 
 { #category : 'defaults' }
-SSWHomePage class >> contextRoot [
+WASWHomePage class >> contextRoot [
 	"Return the context root"
 	
 	^'home'
 ]
 
 { #category : 'initialization' }
-SSWHomePage class >> initialize [
+WASWHomePage class >> initialize [
 	"Initializes the receiver class."
 	
 	self register
 ]
 
 { #category : 'registration' }
-SSWHomePage class >> register [
+WASWHomePage class >> register [
 	<script>
 	
 	super register.	
@@ -32,7 +32,7 @@ SSWHomePage class >> register [
 ]
 
 { #category : 'rendering' }
-SSWHomePage >> renderContentOn: html [
+WASWHomePage >> renderContentOn: html [
 
 	html div 
 		class: 'page home-page';

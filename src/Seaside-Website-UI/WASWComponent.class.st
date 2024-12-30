@@ -2,7 +2,7 @@
 Abstract superclass for components on Seaside website
 "
 Class {
-	#name : 'SSWComponent',
+	#name : 'WASWComponent',
 	#superclass : 'WAComponent',
 	#category : 'Seaside-Website-UI-Base',
 	#package : 'Seaside-Website-UI',

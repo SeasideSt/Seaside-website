@@ -2,7 +2,7 @@
 Common webserver settings
 "
 Class {
-	#name : 'SSWWebserverSettings',
+	#name : 'WASWWebserverSettings',
 	#superclass : 'Object',
 	#classVars : [
 		'DefaultPort',
@@ -15,7 +15,7 @@ Class {
 }
 
 { #category : 'private' }
-SSWWebserverSettings class >> adoptToDeploymentMode [
+WASWWebserverSettings class >> adoptToDeploymentMode [
 
 	self deploymentMode = 'Production' 
 		ifTrue: [ self switchToProductionMode ]
@@ -23,25 +23,25 @@ SSWWebserverSettings class >> adoptToDeploymentMode [
 ]
 
 { #category : 'accessing' }
-SSWWebserverSettings class >> defaultPort [
+WASWWebserverSettings class >> defaultPort [
 
 	^DefaultPort ifNil: [ DefaultPort := 8080 ]
 ]
 
 { #category : 'accessing' }
-SSWWebserverSettings class >> defaultPort: aPort [
+WASWWebserverSettings class >> defaultPort: aPort [
 
 	DefaultPort := aPort
 ]
 
 { #category : 'accessing' }
-SSWWebserverSettings class >> deploymentMode [
+WASWWebserverSettings class >> deploymentMode [
 
 	^DeploymentMode ifNil: [ DeploymentMode := 'Development' ]
 ]
 
 { #category : 'accessing' }
-SSWWebserverSettings class >> deploymentMode: aMode [
+WASWWebserverSettings class >> deploymentMode: aMode [
 
 	DeploymentMode := aMode.
 	
@@ -49,7 +49,7 @@ SSWWebserverSettings class >> deploymentMode: aMode [
 ]
 
 { #category : 'private - accessing' }
-SSWWebserverSettings class >> icebergProjectDirectory [
+WASWWebserverSettings class >> icebergProjectDirectory [
 	"Return the Iceberg directory where the project is stored"
 	
 	^(IceRepository registeredRepositoryIncludingPackage: self package)
@@ -57,14 +57,14 @@ repositoryDirectory
 ]
 
 { #category : 'initialize - release' }
-SSWWebserverSettings class >> reset [
+WASWWebserverSettings class >> reset [
 	<script>
 	
 	DefaultPort := ResourceFolderName := nil.
 ]
 
 { #category : 'accessing' }
-SSWWebserverSettings class >> resourceFolderName [
+WASWWebserverSettings class >> resourceFolderName [
 
 	^ResourceFolderName ifNil: [
 		ResourceFolderName := (self icebergProjectDirectory / 'resources') fullName ]
@@ -72,14 +72,14 @@ SSWWebserverSettings class >> resourceFolderName [
 ]
 
 { #category : 'accessing' }
-SSWWebserverSettings class >> resourceFolderName: aString [
+WASWWebserverSettings class >> resourceFolderName: aString [
 
 	ResourceFolderName := aString
  
 ]
 
 { #category : 'private - deployment' }
-SSWWebserverSettings class >> switchToDevelopmentMode [ 
+WASWWebserverSettings class >> switchToDevelopmentMode [ 
 	<script>
 	
 	"enable Seaside toolbar"
@@ -92,11 +92,11 @@ SSWWebserverSettings class >> switchToDevelopmentMode [
 	WADispatcherBrowser initialize.
 	
 	"Nonetheless reregister homepage to be available on /"
-	SSWHomePage initialize.
+	WASWHomePage initialize.
 ]
 
 { #category : 'private - deployment' }
-SSWWebserverSettings class >> switchToProductionMode [ 
+WASWWebserverSettings class >> switchToProductionMode [ 
 	<script>
 	
 	"Disable Seaside toolbar"
@@ -105,7 +105,7 @@ SSWWebserverSettings class >> switchToProductionMode [
 				configuration removeParent: WADevelopmentConfiguration instance ].
 	
 	"unregister the config tool and browser"	
-	SSWRootComponent 
+	WASWRootComponent 
 		 unregister: 'config';
 		 unregister: 'browse' 
 ]

@@ -2,7 +2,7 @@
 A custom response generator handling not found
 "
 Class {
-	#name : 'SSWHtmlResponseGenerator',
+	#name : 'WASWHtmlResponseGenerator',
 	#superclass : 'WAHtmlResponseGenerator',
 	#category : 'Seaside-Website-Server-Routing',
 	#package : 'Seaside-Website-Server',
@@ -10,9 +10,9 @@ Class {
 }
 
 { #category : 'handling' }
-SSWHtmlResponseGenerator >> notFound [
+WASWHtmlResponseGenerator >> notFound [
  	"Return a custom response for not found"
 	 
 	self response
-		redirectTo: '/', SSWNotFoundPage contextRoot 
+		redirectTo: '/', WASWNotFoundPage contextRoot 
 ]

@@ -2,34 +2,34 @@
 Common superclass for root components on Seaside website
 "
 Class {
-	#name : 'SSWRootComponent',
-	#superclass : 'SSWComponent',
+	#name : 'WASWRootComponent',
+	#superclass : 'WASWComponent',
 	#category : 'Seaside-Website-UI-Base',
 	#package : 'Seaside-Website-UI',
 	#tag : 'Base'
 }
 
 { #category : 'testing' }
-SSWRootComponent class >> canBeRoot [ 
+WASWRootComponent class >> canBeRoot [ 
 
 	^true
 ]
 
 { #category : 'defaults' }
-SSWRootComponent class >> contextRoot [
+WASWRootComponent class >> contextRoot [
 	"Return the default context root"
 	
 	^self subclassResponsibility 
 ]
 
 { #category : 'testing' }
-SSWRootComponent class >> isAbstract [ 
+WASWRootComponent class >> isAbstract [ 
 
-	^self name = #SSWRootComponent
+	^self name = #WASWRootComponent
 ]
 
 { #category : 'registration' }
-SSWRootComponent class >> register [
+WASWRootComponent class >> register [
 	"Register the component"
 	
 	|application|
@@ -37,14 +37,14 @@ SSWRootComponent class >> register [
 	application 		 
 "		addLibrary: JQDeploymentLibrary;
 		addLibrary: SSWBootstrapLibrary;"
-		addLibrary: SSWFileLibrary.
+		addLibrary: WASWFileLibrary.
 	application preferenceAt: #resourceBaseUrl put: '/'.
 	^ application
 	 
 ]
 
 { #category : 'registration' }
-SSWRootComponent class >> unregister: ctx [
+WASWRootComponent class >> unregister: ctx [
 	"
 	 Unregister the component. 
 	
@@ -57,13 +57,13 @@ SSWRootComponent class >> unregister: ctx [
 ]
 
 { #category : 'defaults' }
-SSWRootComponent >> pageTitle [
+WASWRootComponent >> pageTitle [
 
 	^ 'Seaside'
 ]
 
 { #category : 'rendering' }
-SSWRootComponent >> renderGithubLinkOn: html [
+WASWRootComponent >> renderGithubLinkOn: html [
 
 	html anchor
 		class: 'github-corner';
@@ -75,7 +75,7 @@ SSWRootComponent >> renderGithubLinkOn: html [
 ]
 
 { #category : 'rendering' }
-SSWRootComponent >> renderPageNavigationOn: html [
+WASWRootComponent >> renderPageNavigationOn: html [
 
 	html div class: 'navigation'; with: [ 
 		html div class: 'sections'; with: [
@@ -87,7 +87,7 @@ SSWRootComponent >> renderPageNavigationOn: html [
 			html div class: 'section'; with: [
 				html div class: 'section-content'; with: [
 					html div class: 'section-header'; with: [
-						html anchor callback: [ self call: SSWDocumentationPage new ]; with: 'Documentation' ].
+						html anchor callback: [ self call: WASWDocumentationPage new ]; with: 'Documentation' ].
 					html div class: 'section-detail'; with: 'Learn to develop' ] ].
 			self
 				renderSectionTitled: 'Releases'
@@ -102,7 +102,7 @@ SSWRootComponent >> renderPageNavigationOn: html [
 ]
 
 { #category : 'rendering' }
-SSWRootComponent >> renderSectionTitled: sectionName url: urlString detail: detailString on: html [
+WASWRootComponent >> renderSectionTitled: sectionName url: urlString detail: detailString on: html [
 
 	html div class: 'section'; with: [
 		html div class: 'section-content'; with: [
@@ -112,7 +112,7 @@ SSWRootComponent >> renderSectionTitled: sectionName url: urlString detail: deta
 ]
 
 { #category : 'updating' }
-SSWRootComponent >> updateRoot: htmlRoot [
+WASWRootComponent >> updateRoot: htmlRoot [
 
 	htmlRoot title: self pageTitle
 	

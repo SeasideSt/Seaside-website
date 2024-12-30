@@ -1,13 +1,13 @@
 Class {
-	#name : 'SSWDocumentationPage',
-	#superclass : 'SSWRootComponent',
+	#name : 'WASWDocumentationPage',
+	#superclass : 'WASWRootComponent',
 	#category : 'Seaside-Website-UI-Pages',
 	#package : 'Seaside-Website-UI',
 	#tag : 'Pages'
 }
 
 { #category : 'rendering' }
-SSWDocumentationPage >> renderContentOn: html [
+WASWDocumentationPage >> renderContentOn: html [
 
 	html div 
 		class: 'page documentation-page';
@@ -24,7 +24,7 @@ SSWDocumentationPage >> renderContentOn: html [
 ]
 
 { #category : 'rendering' }
-SSWDocumentationPage >> renderPageContentOn: html [
+WASWDocumentationPage >> renderPageContentOn: html [
 
 	html div class: 'content'; with: [ 
 		html div class: 'sections'; with: [
