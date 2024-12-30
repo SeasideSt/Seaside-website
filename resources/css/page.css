@@ -61,6 +61,12 @@
   animation: octocat-wave 560ms ease-in-out
 }
 
+.page .logo {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
 @keyframes octocat-wave {
   0%,
   100% {

@@ -12,6 +12,10 @@
   border-radius: 6px;
 }
 
+.home-page h1 {
+  padding-top: 20px;
+}
+
 @media (width < 850px) {
 
   .home-page .logo {
