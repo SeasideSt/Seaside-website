@@ -4,4 +4,4 @@ LABEL org.opencontainers.image.source https://github.com/SeasideSt/Seaside-websi
 RUN ./pharo metacello install github://SeasideSt/Seaside-website:master BaselineOfSeasideWebsite
 RUN ./pharo eval --save "WAAdmin defaultServerManager stopAll"
 EXPOSE 8080/tcp
-CMD pharo eval --no-quit "SSWWebserver start"
+CMD pharo eval --no-quit "WASWWebserver start"
