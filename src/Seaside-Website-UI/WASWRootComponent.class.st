@@ -75,6 +75,23 @@ WASWRootComponent >> renderGithubLinkOn: html [
 ]
 
 { #category : 'rendering' }
+WASWRootComponent >> renderHeadingItemsOn: html [
+
+	self renderLogoOn: html.
+	self renderGithubLinkOn: html
+]
+
+{ #category : 'rendering' }
+WASWRootComponent >> renderLogoOn: html [
+
+	html anchor
+		class: 'logo';
+		url: '/';
+		with: [ 
+			html image resourceUrl: 'images/seaside-s.png' ]
+]
+
+{ #category : 'rendering' }
 WASWRootComponent >> renderPageNavigationOn: html [
 
 	html div class: 'navigation'; with: [ 
@@ -87,7 +104,7 @@ WASWRootComponent >> renderPageNavigationOn: html [
 			html div class: 'section'; with: [
 				html div class: 'section-content'; with: [
 					html div class: 'section-header'; with: [
-						html anchor callback: [ self call: WASWDocumentationPage new ]; with: 'Documentation' ].
+						html anchor callback: [ self show: WASWDocumentationPage new ]; with: 'Documentation' ].
 					html div class: 'section-detail'; with: 'Learn to develop' ] ].
 			self
 				renderSectionTitled: 'Releases'

@@ -12,7 +12,7 @@ WASWDocumentationPage >> renderContentOn: html [
 	html div 
 		class: 'page documentation-page';
 		with: [
-			self renderGithubLinkOn: html.
+			self renderHeadingItemsOn: html.
 			html heading level: 1; with: 'Documentation'.
 			html div
 				class: 'columns';
