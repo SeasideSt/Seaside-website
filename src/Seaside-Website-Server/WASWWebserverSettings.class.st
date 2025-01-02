@@ -105,7 +105,7 @@ WASWWebserverSettings class >> switchToProductionMode [
 				configuration removeParent: WADevelopmentConfiguration instance ].
 	
 	"unregister the config tool and browser"	
-	WASWRootComponent 
+	WASeasideWebsiteRoot 
 		 unregister: 'config';
 		 unregister: 'browse' 
 ]

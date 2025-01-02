@@ -3,24 +3,11 @@ A component rendered when something is not found
 "
 Class {
 	#name : 'WASWNotFoundPage',
-	#superclass : 'WASWRootComponent',
+	#superclass : 'WASWPage',
 	#category : 'Seaside-Website-UI-Pages',
 	#package : 'Seaside-Website-UI',
 	#tag : 'Pages'
 }
-
-{ #category : 'defaults' }
-WASWNotFoundPage class >> contextRoot [
-
-	^'notFound'
-]
-
-{ #category : 'initialize - release' }
-WASWNotFoundPage class >> initialize [
-	"Initializes the receiver class."
-	
-	self register
-]
 
 { #category : 'defaults' }
 WASWNotFoundPage >> pageTitle [
