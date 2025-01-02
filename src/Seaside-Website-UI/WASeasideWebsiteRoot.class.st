@@ -18,6 +18,12 @@ WASeasideWebsiteRoot class >> canBeRoot [
 	^true
 ]
 
+{ #category : 'testing' }
+WASeasideWebsiteRoot class >> initialize [
+
+	self register
+]
+
 { #category : 'registration' }
 WASeasideWebsiteRoot class >> register [
 	<script>
