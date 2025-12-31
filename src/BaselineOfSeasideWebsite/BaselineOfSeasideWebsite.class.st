@@ -2,12 +2,13 @@
 Baseline for the Seaside website project
 "
 Class {
-	#name : #BaselineOfSeasideWebsite,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfSeasideWebsite
+	#name : 'BaselineOfSeasideWebsite',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfSeasideWebsite',
+	#package : 'BaselineOfSeasideWebsite'
 }
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfSeasideWebsite >> baseline: spec [  
 	<baseline>
 	
@@ -25,13 +26,13 @@ BaselineOfSeasideWebsite >> baseline: spec [
 	]
 ]
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfSeasideWebsite >> seaside: spec [ 
 
 	spec
 			baseline: 'Seaside3'
         	with: [ 
 				spec
-					loads: #('default');
+					loads: #('default' 'Seaside-Microdown');
 					repository: 'github://SeasideSt/Seaside:master/repository' ]
 ]

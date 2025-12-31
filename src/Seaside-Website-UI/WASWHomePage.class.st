@@ -30,7 +30,8 @@ WASWHomePage >> pageCssClass [
 { #category : 'rendering' }
 WASWHomePage >> renderContentOn: html [	
 	
-	html div class: 'page-content'; with: [ html microDown:
+	html div class: 'page-content'; with: [ 
+		html microDown:
 
 'Seaside provides a layered set of abstractions over HTTP and HTML that let you build highly interactive web applications quickly, reusably and maintainably. It is based in Smalltalk, a proven and robust language that is implemented by different vendors. Seaside includes:
 

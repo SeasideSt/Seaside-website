@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfSeasideWebsite }
+Package { #name : 'BaselineOfSeasideWebsite' }
