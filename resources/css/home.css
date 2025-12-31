@@ -1,5 +1,6 @@
 .home-page {
   grid-template-rows: 300px 1fr 40px;
+  list-style-image: url("../images/star.png");
 }
 
 .home-page-logo {

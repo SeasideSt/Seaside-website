@@ -36,9 +36,11 @@
 .page-content {
   background-color: rgb(241 238 238 / 85%);
   padding: 20px;
+  margin: 0px 40px 0px 40px;;
   border-radius: 6px;
   height: 100%;
   font-size: 110%;
+  line-height: 1.5;
   overflow-y: scroll;
 }
 
