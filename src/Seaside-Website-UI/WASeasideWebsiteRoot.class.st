@@ -64,10 +64,9 @@ WASeasideWebsiteRoot >> renderContentOn: html [
 		with: [
 			currentPage needsLogo ifTrue:[ self renderLogoOn: html ].
 			self renderGithubLinkOn: html.
-			html div class: 'page-header'; with: [ currentPage renderPageHeaderOn: html ].			
-			html div class: 'page-left-column'.		
-			html div class: 'page-middle-column'; with: currentPage.			
-			html div class: 'page-right-column'; with: [ self renderPageNavigationOn: html ].			
+			self renderPageNavigationOn: html.
+			html div class: 'page-header'; with: [ currentPage renderPageHeaderOn: html ].		
+			html div class: 'page-content'; with: currentPage.
 			html div class: 'page-footer' ]
 ]
 

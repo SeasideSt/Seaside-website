@@ -24,7 +24,7 @@ SSWWebserver
 
 ** Work in progress **
 
-The `/docker` folder of this project contains a draft Docker configuration to deploy the website.
+The root folder of this project contains a draft Docker configuration to deploy the website.
 
 We use the Pharo docker images provided by [https://github.com/ba-st/docker-pharo-runtime].
 Run the following in a shell terminal:

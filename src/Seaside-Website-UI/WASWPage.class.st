@@ -41,7 +41,7 @@ WASWPage >> pageTitle [
 
 { #category : 'rendering' }
 WASWPage >> renderPageHeaderOn: html [
-
+	
 	html heading level: 1; with: self pageTitle.
 ]
 

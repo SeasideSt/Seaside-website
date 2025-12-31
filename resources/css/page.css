@@ -1,13 +1,13 @@
 .page {
   display: grid;
-  grid-template-columns: 250px 1fr 250px;
+  grid-template-columns: 250px 1fr;
   grid-template-rows: 216px 1fr 40px;
   gap: 15px;
   height: 100%;
 }
 
 .page-header {
-  grid-column-start: span 3;
+  grid-column-start: span 2;
 }
 
 .page-footer {
@@ -26,8 +26,9 @@
 }
 
 .navigation {
+  grid-row-start: span 2;
   background-color: rgb(221 189 141 / 70%);
-  padding: 20px;
+  padding: 120px 20px 20px 20px;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
@@ -37,7 +38,12 @@
   padding: 20px;
   border-radius: 6px;
   height: 100%;
+  font-size: 110%;
   overflow-y: scroll;
+}
+
+.page-content a {
+  font-weight: bold;
 }
 
 .section + .section {
@@ -64,7 +70,7 @@
 }
 
 .section-detail {
-  color: #245E86;
+  color: #C5161A;
 }
 
 .section-body {
@@ -82,7 +88,7 @@
 
 .logo {
   position: absolute;
-  left: 5px;
+  left: 10px;
   top: 5px;
 }
 

@@ -29,11 +29,10 @@ WASWHomePage >> pageCssClass [
 
 { #category : 'rendering' }
 WASWHomePage >> renderContentOn: html [	
-	
-	html div class: 'page-content'; with: [ 
+
 		html microDown:
 
-'Seaside provides a layered set of abstractions over HTTP and HTML that let you build highly interactive web applications quickly, reusably and maintainably. It is based in Smalltalk, a proven and robust language that is implemented by different vendors. Seaside includes:
+'Seaside provides a layered set of abstractions over HTTP and HTML that let you build highly interactive web applications quickly, reusably and maintainably. It is based in [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk), a proven and robust language that is implemented by different vendors. Seaside includes:
 
 - [Programmatic HTML generation](https://github.com/SeasideSt/Seaside/wiki/Generating-HTML).  A lot of markup is boilerplate: the same patterns of lists, links, forms and tables show up on page after page. Seaside has a rich API for generating HTML that lets you abstract these patterns into convenient methods rather than pasting the same sequence of tags into templates every time.
 
@@ -43,7 +42,7 @@ WASWHomePage >> renderContentOn: html [
 
 - [Modal session management](https://github.com/SeasideSt/Seaside/wiki/Call-and-Answer).  What if you could express a complex, multi-page workflow in a single method?  Unlike servlet models which require a separate handler for each page or request, Seaside models an entire user session as a continuous piece of code, with natural, linear control flow.  In Seaside, components can call and return to each other like subroutines; string a few of those calls together in a method, just as if you were using console I/O or opening modal dialog boxes, and you have a workflow. And yes, the back button will still work.
 
-Seaside also has good support for [CSS and Javascript](https://github.com/SeasideSt/Seaside/wiki/CSS-and-Javascript), excellent [web-based development tools](https://github.com/SeasideSt/Seaside/wiki/Development-Tools) and [debugging support](https://github.com/SeasideSt/Seaside/wiki/Debugging-Seaside-Applications), a rich [configuration and preferences](https://github.com/SeasideSt/Seaside/wiki/Configuration-and-Preferences) framework, and more.' ]
+Seaside also has good support for [CSS and Javascript](https://github.com/SeasideSt/Seaside/wiki/CSS-and-Javascript), excellent [web-based development tools](https://github.com/SeasideSt/Seaside/wiki/Development-Tools) and [debugging support](https://github.com/SeasideSt/Seaside/wiki/Debugging-Seaside-Applications), a rich [configuration and preferences](https://github.com/SeasideSt/Seaside/wiki/Configuration-and-Preferences) framework, and more.'
 ]
 
 { #category : 'rendering' }
