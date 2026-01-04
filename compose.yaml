@@ -1,7 +1,8 @@
-name: seaside.st
+name: seaside-st
 
 services:
   web:
-    image: seaside-website
+    #image: seaside-website
+    build: .
     ports:
       - 8080:8080
